@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plochkite.bg | Премиум Плочки & Оборудване за Баня</title>
+    <meta name="description" content="Внос и продажба на испански и италиански плочки, санитарен фаянс, смесители и душ колони. Шоурум в град Варна с над 25 години опит.">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div class="header-top-left">
+                    <span class="header-top-link">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <span data-i18n="showroom_address">гр. Варна, бул. Приморски 17</span>
+                    </span>
+                    <span class="header-top-link">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        0899 91 81 35
+                    </span>
+                </div>
+                <div class="header-top-right">
+                    <!-- 6-Language Toggle picker -->
+                    <div class="lang-toggle">
+                        <button class="lang-btn active" data-lang="bg" title="Български">BG</button>
+                        <button class="lang-btn" data-lang="en" title="English">EN</button>
+                        <button class="lang-btn" data-lang="ru" title="Русский">RU</button>
+                        <button class="lang-btn" data-lang="ua" title="Українська">UA</button>
+                        <button class="lang-btn" data-lang="es" title="Español">ES</button>
+                        <button class="lang-btn" data-lang="it" title="Italiano">IT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main container">
+            <div class="logo" data-target-tab="home">
+                <div class="logo-tile">P</div>
+                <span>PLOCHKITE</span>
+            </div>
+            
+            <nav class="main-nav">
+                <span class="nav-link active" data-target-tab="home" data-i18n="nav_home">Начало</span>
+                <span class="nav-link" data-target-tab="catalog" data-i18n="nav_catalog" onclick="window.app.setCategoryFilter('all')">Каталог</span>
+                <span class="nav-link" data-target-tab="showroom" data-i18n="nav_showroom">Шоурум Варна</span>
+                <span class="nav-link" data-target-tab="admin" data-i18n="nav_admin" style="color: var(--color-accent-dark); font-weight: 600;">Админ Панел</span>
+            </nav>
+
+            <div class="header-actions">
+                <button class="header-action-btn" id="open-cart">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- TAB 1: HOME PAGE (AIDA MARKETING MODEL) -->
+    <main id="section-home" class="page-section active">
+        <!-- 1. ATTENTION (Hero Section) -->
+        <section class="hero-section" style="background-image: url('assets/tiles/hero.png');">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="hero-tagline" data-i18n="hero_tagline">ДИРЕКТЕН ВНОС & ГАРАНЦИЯ</span>
+                <h1 class="hero-title" data-i18n="hero_title">Луксозни плочки и пълно оборудване за баня</h1>
+                <p class="hero-desc" data-i18n="hero_desc">Открийте най-добрите колекции плочки от Испания и Италия и се насладете на първокласно санитарно оборудване, смесители и душ системи. Попитайте за безплатни мостри.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-accent" data-target-tab="catalog" data-i18n="btn_explore" onclick="window.app.setCategoryFilter('all')">Разгледай Каталога</button>
+                    <button class="btn btn-outline" style="border-color: white; color: white;" data-target-tab="showroom" data-i18n="btn_contact">Връзка с нас</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Trust Markers -->
+        <section style="background-color: var(--color-primary); color: white; padding: 2.5rem 0; border-bottom: 4px solid var(--color-accent);">
+            <div class="container feature-badge-row">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <svg fill="none" stroke="var(--color-accent)" viewBox="0 0 24 24" style="width: 36px; height: 36px; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    <span data-i18n="guarantee_1" style="font-weight: 500; font-size: 0.95rem;">Професионално обслужване и консултации</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <svg fill="none" stroke="var(--color-accent)" viewBox="0 0 24 24" style="width: 36px; height: 36px; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10M13 16h6l4-5H13"/></svg>
+                    <span data-i18n="guarantee_2" style="font-weight: 500; font-size: 0.95rem;">Бърза доставка в цяла България</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <svg fill="none" stroke="var(--color-accent)" viewBox="0 0 24 24" style="width: 36px; height: 36px; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    <span data-i18n="guarantee_3" style="font-weight: 500; font-size: 0.95rem;">Възможност за съхранение в наш склад</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. INTEREST (Category Highlights) -->
+        <section class="container" style="padding: 5rem 0;">
+            <div class="section-header">
+                <span class="section-subtitle" data-i18n="section_cat_subtitle">КУРАТОРСКИ КОЛЕКЦИИ</span>
+                <h2 class="section-title" data-i18n="section_cat_title">Нашите Основни Категории</h2>
+            </div>
+            
+            <div class="category-grid">
+                <div class="category-card" onclick="window.app.setCategoryFilter('tiles')">
+                    <img src="assets/tiles/zellige_emerald.png" alt="Плочки">
+                    <div class="category-card-overlay">
+                        <h3 data-i18n="cat_tiles">Плочки</h3>
+                        <p>Италиански мрамор, теракота & Zellige</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="window.app.setCategoryFilter('toilets')">
+                    <img src="assets/tiles/hero.png" alt="Санитария">
+                    <div class="category-card-overlay">
+                        <h3 data-i18n="cat_toilets">Тоалетни & Санитария</h3>
+                        <p>Римлес конзолни тоалетни & структури</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="window.app.setCategoryFilter('faucets')">
+                    <img src="assets/tiles/hero.png" alt="Смесители">
+                    <div class="category-card-overlay">
+                        <h3 data-i18n="cat_faucets">Смесители</h3>
+                        <p>Матирано злато, хром & черен мат</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="window.app.setCategoryFilter('showers')">
+                    <img src="assets/tiles/hero.png" alt="Душове">
+                    <div class="category-card-overlay">
+                        <h3 data-i18n="cat_showers">Душове & Колони</h3>
+                        <p>Термостатични душ системи</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. DESIRE (Testimonials & Catalog Value Promo) -->
+        <section style="background-color: #fafaf9; padding: 5rem 0; border-top: 1px solid var(--color-border-warm); border-bottom: 1px solid var(--color-border-warm);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">ОТЗИВИ НА КЛИЕНТИ</span>
+                    <h2 class="section-title">Защо да изберете нас?</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="trust-card">
+                        <div class="trust-stars">
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 1rem;">"Изключително качество на гранитогреса. Поръчахме пълно оборудване за банята от смесителите до конзолната тоалетна. Всичко пристигна навреме, перфектно опаковано."</p>
+                        <h4 style="font-family: var(--font-heading); font-size: 0.95rem;">Георги Василев, Варна</h4>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-stars">
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 1rem;">"Excellent support! They helped us select matching terracotta and shower heads for our hotel remodel project. Multilingual staff was incredibly helpful."</p>
+                        <h4 style="font-family: var(--font-heading); font-size: 0.95rem;">Elena Rostova, Sofia</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ACTION (Contact Inquiry Panel) -->
+        <section class="container" style="padding: 5rem 0;">
+            <div class="showroom-layout" style="align-items: stretch;">
+                <div style="display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
+                    <span class="section-subtitle" data-i18n="nav_showroom">ШОУРУМ ВАРНА</span>
+                    <h2 class="section-title" style="font-size: 2.25rem; text-align: left;" data-i18n="consult_header">Консултация & Индивидуален Дизайн</h2>
+                    <p style="font-size: 1rem; color: var(--color-text-dark);">
+                        Изпратете запитване за количества, спецификации или направете консултация за обзавеждане на вашата нова баня.
+                    </p>
+                    <div style="font-weight: 600; color: var(--color-accent-dark); font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
+                        <span>📞 052 / 333 308 (Варна)</span>
+                        <span>✉️ dostavki@plochkite.bg</span>
+                        <span data-i18n="showroom_address">Адрес: гр. Варна, бул. Приморски 17</span>
+                    </div>
+                </div>
+
+                <div class="consultation-card">
+                    <form class="consultation-form" id="consultation-booking-form">
+                        <div class="form-group form-group-full">
+                            <label for="booking-name" data-i18n="form_name">Вашето име</label>
+                            <input type="text" id="booking-name" required placeholder="Иван Иванов">
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-phone" data-i18n="form_phone">Телефонен номер</label>
+                            <input type="tel" id="booking-phone" required placeholder="0899 XXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-email" data-i18n="form_email">Имейл адрес</label>
+                            <input type="email" id="booking-email" required placeholder="ivan@gmail.com">
+                        </div>
+                        <div class="form-group form-group-full">
+                            <label for="booking-msg" data-i18n="form_msg">Запитване</label>
+                            <textarea id="booking-msg" rows="3" placeholder="Пример: Търся оферта за 35 кв.м. Изумруден зелиж и тоалетна чиния Rimless..."></textarea>
+                        </div>
+                        <button class="btn btn-primary form-submit-btn" type="submit" data-i18n="btn_book">Изпрати запитване</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- TAB 2: PRODUCT CATALOG PAGE -->
+    <main id="section-catalog" class="page-section">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 2.5rem; text-align: left;">
+                <span class="section-subtitle" data-i18n="nav_catalog">Каталог</span>
+                <h2 class="section-title" style="font-size: 2rem;">Нашите Колекции</h2>
+            </div>
+
+            <!-- Sub category pills -->
+            <div style="display: flex; gap: 0.75rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <button class="btn btn-outline cat-pill active" data-cat="all" onclick="window.app.setCategoryFilter('all')" style="padding: 0.5rem 1.25rem;">Всички</button>
+                <button class="btn btn-outline cat-pill" data-cat="tiles" onclick="window.app.setCategoryFilter('tiles')" style="padding: 0.5rem 1.25rem;" data-i18n="cat_tiles">Плочки</button>
+                <button class="btn btn-outline cat-pill" data-cat="toilets" onclick="window.app.setCategoryFilter('toilets')" style="padding: 0.5rem 1.25rem;" data-i18n="cat_toilets">Тоалетни</button>
+                <button class="btn btn-outline cat-pill" data-cat="faucets" onclick="window.app.setCategoryFilter('faucets')" style="padding: 0.5rem 1.25rem;" data-i18n="cat_faucets">Смесители</button>
+                <button class="btn btn-outline cat-pill" data-cat="showers" onclick="window.app.setCategoryFilter('showers')" style="padding: 0.5rem 1.25rem;" data-i18n="cat_showers">Душове</button>
+            </div>
+
+            <div class="catalog-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div>
+                        <div class="filter-group-title">
+                            <span data-i18n="filter_title">Филтриране</span>
+                            <button class="btn btn-ghost" id="clear-filters" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;" data-i18n="filter_clear">Изчисти</button>
+                        </div>
+                    </div>
+
+                    <!-- Material Filter -->
+                    <div>
+                        <h4 class="filter-group-title" data-i18n="filter_material">Материал</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="material" value="porcelain">
+                                <span>Гранитогрес (Porcelain)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="material" value="ceramic">
+                                <span>Керамика (Ceramic)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="material" value="brass">
+                                <span>Месинг (Brass)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Color Filter -->
+                    <div>
+                        <h4 class="filter-group-title" data-i18n="filter_color">Цвят</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="color" value="white">
+                                <span>Бял / White</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="color" value="gray">
+                                <span>Сив / Gray</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="color" value="green">
+                                <span>Зелен / Green</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="color" value="gold">
+                                <span>Златен / Gold</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="color" value="black">
+                                <span>Черен / Black</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div>
+                        <h4 class="filter-group-title" data-i18n="filter_price">Цена (лв.)</h4>
+                        <div class="price-range-inputs">
+                            <input type="number" id="price-min" placeholder="мин" min="0">
+                            <span style="color: var(--color-text-muted);">-</span>
+                            <input type="number" id="price-max" placeholder="макс" min="0">
+                        </div>
+                        <button class="btn btn-primary" id="apply-price" style="width: 100%; padding: 0.5rem; margin-top: 0.75rem; font-size: 0.75rem;">Приложи</button>
+                    </div>
+                </aside>
+
+                <!-- Catalog Grid Area -->
+                <div class="catalog-main">
+                    <div class="catalog-toolbar">
+                        <div class="search-input-wrapper">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                            <input type="text" id="search-catalog" placeholder="Търси..." data-i18n="search_placeholder">
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span class="results-count" id="results-count-text">0 продукта</span>
+                            <select id="sort-catalog" class="sort-select">
+                                <option value="featured" data-i18n="sort_featured">Препоръчани</option>
+                                <option value="price_asc" data-i18n="sort_price_asc">Цена: възходяща</option>
+                                <option value="price_desc" data-i18n="sort_price_desc">Цена: низходяща</option>
+                                <option value="rating" data-i18n="sort_rating">Оценка</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-grid" id="catalog-grid">
+                        <!-- Dynamic content loaded via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- TAB 3: SHOWROOM VARNA PAGE -->
+    <main id="section-showroom" class="page-section">
+        <div class="container">
+            <div class="showroom-layout">
+                <div class="showroom-text">
+                    <span class="section-subtitle" data-i18n="nav_showroom">Шоурум Варна</span>
+                    <h2 class="section-title" data-i18n="showroom_title" style="font-size: 2.5rem;">Нашият Showroom във Варна</h2>
+                    <p class="hero-desc" data-i18n="showroom_desc" style="color: var(--color-text-dark); font-size: 1rem; margin-bottom: 0.5rem;">
+                        Заповядайте на място, за да разгледате нашите мостри и да се консултирате с екипа ни за най-подходящите решения за вашия дом.
+                    </p>
+                    
+                    <p style="font-weight: 600; color: var(--color-accent-dark);">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px; vertical-align: middle; margin-right: 0.5rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        Варна, бул. Приморски 17 (близо до Морска гара)
+                    </p>
+
+                    <div>
+                        <h3 class="calc-title" data-i18n="showroom_hours">Работно време</h3>
+                        <table class="showroom-hours-table">
+                            <tr>
+                                <td data-i18n="showroom_weekdays">Понеделник - Петък: 09:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="showroom_saturday">Събота: 09:30 - 14:00</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="showroom_sunday">Неделя: Затворено</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="consultation-card">
+                    <h3 style="font-size: 1.35rem; font-family: var(--font-heading); margin-bottom: 0.5rem;" data-i18n="consult_header">Консултация & Индивидуален Дизайн</h3>
+                    <form class="consultation-form" id="consultation-booking-form">
+                        <div class="form-group form-group-full">
+                            <label for="booking-name" data-i18n="form_name">Вашето име</label>
+                            <input type="text" id="booking-name-2" required placeholder="Иван Иванов">
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-phone" data-i18n="form_phone">Телефонен номер</label>
+                            <input type="tel" id="booking-phone-2" required placeholder="0899 XXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-email" data-i18n="form_email">Имейл адрес</label>
+                            <input type="email" id="booking-email-2" required placeholder="ivan@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-date" data-i18n="form_date">Дата на посещение</label>
+                            <input type="date" id="booking-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-time" data-i18n="form_time">Желан час</label>
+                            <select id="booking-time">
+                                <option>09:30</option>
+                                <option>11:00</option>
+                                <option>13:30</option>
+                                <option>15:00</option>
+                                <option>16:30</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary form-submit-btn" type="submit" data-i18n="btn_book">Изпрати запитване</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- TAB 4: ADMIN DASHBOARD (SELF-MANAGEMENT CRUD TAB) -->
+    <main id="section-admin" class="page-section">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 2.5rem; text-align: left;">
+                <span class="section-subtitle" data-i18n="nav_admin">Админ Панел</span>
+                <h2 class="section-title" data-i18n="admin_title">Управление на Магазина</h2>
+                <p style="color: var(--color-text-muted); margin-top: 0.5rem;">
+                    Добавяйте нови артикули, променяйте цени, редактирайте продуктови детайли или изтривайте продукти от каталога. Всички промени се запаметяват динамично.
+                </p>
+            </div>
+
+            <div class="admin-layout">
+                <!-- Add/Edit form -->
+                <div class="admin-card">
+                    <form id="admin-product-form">
+                        <fieldset>
+                            <legend id="admin-form-legend" data-i18n="admin_add_product">Добавяне / Редакция на Артикул</legend>
+                            
+                            <div class="form-group">
+                                <label for="prod-name" data-i18n="admin_field_name">Име на продукта</label>
+                                <input type="text" id="prod-name" required placeholder="Пример: Травертин Беж 60х60">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prod-price" data-i18n="admin_field_price">Цена (лв.)</label>
+                                <input type="number" id="prod-price" required step="0.01" min="0" placeholder="0.00">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prod-category" data-i18n="admin_field_category">Категория</label>
+                                <select id="prod-category">
+                                    <option value="tiles">Плочки (Tiles)</option>
+                                    <option value="toilets">Тоалетни (Toilets)</option>
+                                    <option value="faucets">Смесители (Faucets)</option>
+                                    <option value="showers">Душове (Showers)</option>
+                                    <option value="accessories">Аксесоари (Accessories)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prod-material" data-i18n="admin_field_material">Материал</label>
+                                <select id="prod-material">
+                                    <option value="porcelain">Гранитогрес (Porcelain)</option>
+                                    <option value="ceramic">Керамика (Ceramic)</option>
+                                    <option value="brass">Месинг (Brass)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prod-color" data-i18n="admin_field_color">Цвят</label>
+                                <select id="prod-color">
+                                    <option value="white">Бял (White)</option>
+                                    <option value="gray">Сив (Gray)</option>
+                                    <option value="green">Зелен (Green)</option>
+                                    <option value="gold">Златен (Gold)</option>
+                                    <option value="black">Черен (Black)</option>
+                                    <option value="terracotta">Керемиден (Terracotta)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prod-image" data-i18n="admin_field_image">URL Адрес на снимка</label>
+                                <input type="text" id="prod-image" placeholder="assets/tiles/hero.png">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prod-desc" data-i18n="admin_field_desc">Описание на артикула</label>
+                                <textarea id="prod-desc" rows="3" required placeholder="Описание на български език..."></textarea>
+                            </div>
+
+                            <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem;">
+                                <button class="btn btn-primary" type="submit" style="flex: 1;" data-i18n="admin_btn_save">Запази Продукта</button>
+                                <button class="btn btn-outline" id="admin-btn-cancel" type="button" style="display: none;" data-i18n="admin_btn_cancel">Отказ</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <!-- Product management Table -->
+                <div class="admin-table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 70px;">Снимка</th>
+                                <th data-i18n="admin_field_name">Име</th>
+                                <th data-i18n="admin_field_category">Категория</th>
+                                <th data-i18n="admin_field_price">Цена</th>
+                                <th style="text-align: right; width: 180px;">Действие</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-product-list-body">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer style="background-color: var(--color-primary); color: rgba(255,255,255,0.7); padding: 4rem 0 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 5rem;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+            <div>
+                <div class="logo" style="color: white; margin-bottom: 1rem;">
+                    <div class="logo-tile">P</div>
+                    <span>PLOCHKITE</span>
+                </div>
+                <p style="font-size: 0.8125rem; line-height: 1.8;">
+                    Директен внос на керамични плочки и обзавеждане за баня от Испания и Италия. Над 20 години лоялност и професионализъм.
+                </p>
+            </div>
+            <div>
+                <h4 style="color: white; font-family: var(--font-heading); margin-bottom: 1.25rem; font-size: 1rem;" data-i18n="nav_catalog">Каталог</h4>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.8125rem;">
+                    <li><span onclick="window.app.setCategoryFilter('tiles')" style="cursor:pointer;" data-i18n="cat_tiles">Плочки</span></li>
+                    <li><span onclick="window.app.setCategoryFilter('toilets')" style="cursor:pointer;" data-i18n="cat_toilets">Тоалетни</span></li>
+                    <li><span onclick="window.app.setCategoryFilter('faucets')" style="cursor:pointer;" data-i18n="cat_faucets">Смесители</span></li>
+                    <li><span onclick="window.app.setCategoryFilter('showers')" style="cursor:pointer;" data-i18n="cat_showers">Душове</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: white; font-family: var(--font-heading); margin-bottom: 1.25rem; font-size: 1rem;" data-i18n="nav_showroom">Шоурум Варна</h4>
+                <p style="font-size: 0.8125rem; line-height: 1.8;">
+                    бул. Приморски 17<br>
+                    9000 Варна, България<br>
+                    Телефон: 052 / 333 308
+                </p>
+            </div>
+        </div>
+        <div class="container" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 0.75rem;">
+            <span>&copy; 2026 Plochkite.bg (DM Pro EOOD). Всички права запазени.</span>
+            <span>Дизайн & Редизайн: Antigravity</span>
+        </div>
+    </footer>
+
+    <!-- PRODUCT DETAIL VIEW MODAL -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-content">
+            <button class="close-modal-btn" id="close-modal">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            <div class="product-detail-layout">
+                <div class="detail-gallery">
+                    <div class="main-detail-img">
+                        <img src="" id="modal-img" alt="">
+                    </div>
+                </div>
+
+                <div class="detail-specs">
+                    <div>
+                        <h2 id="modal-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Продукт</h2>
+                        <span class="badge badge-accent" id="modal-box-info" style="margin-bottom: 1rem;">За опаковка</span>
+                        <div id="modal-price" style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary); margin-top: 0.5rem;">0.00 лв.</div>
+                    </div>
+
+                    <p id="modal-desc" style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.7;"></p>
+
+                    <!-- Technical Specs table -->
+                    <div class="spec-list">
+                        <div class="spec-item">
+                            <span class="spec-label" data-i18n="filter_material">Материал</span>
+                            <span class="spec-value" id="spec-material">Гранитогрес</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Произход</span>
+                            <span class="spec-value" id="spec-origin">Испания</span>
+                        </div>
+                    </div>
+
+                    <!-- Calculator box (only for tiles) -->
+                    <div class="tile-calculator">
+                        <div class="calc-title" data-i18n="calc_header">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px; color: var(--color-accent-dark);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 11h.01M12 7h.01M9 11h.01M12 17h.01M15 11h.01M15 7h.01M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"/></svg>
+                            Калкулатор за пакети
+                        </div>
+                        
+                        <div class="calc-inputs">
+                            <div class="calc-field">
+                                <label for="calc-area-input" data-i18n="calc_area">Площ (м²)</label>
+                                <input type="number" id="calc-area-input" placeholder="например 15" min="0">
+                            </div>
+                        </div>
+
+                        <div class="waste-selector">
+                            <span class="waste-label" data-i18n="calc_waste">Фира (за рязане)</span>
+                            <div class="waste-buttons">
+                                <button class="waste-btn" data-waste="5">5%</button>
+                                <button class="waste-btn active" data-waste="10">10%</button>
+                                <button class="waste-btn" data-waste="15">15%</button>
+                            </div>
+                        </div>
+
+                        <div class="calc-results">
+                            <div class="calc-result-box">
+                                <span class="calc-result-label" data-i18n="calc_boxes_needed">Необходими кашони</span>
+                                <span class="calc-result-val" id="calc-boxes-needed-val">0</span>
+                            </div>
+                            <div class="calc-result-box">
+                                <span class="calc-result-label" data-i18n="calc_total_price">Обща сума</span>
+                                <span class="calc-result-val" id="calc-total-price-val" style="color: var(--color-accent-dark); font-weight: 700;">0.00 лв.</span>
+                            </div>
+                            <div class="calc-result-box" style="grid-column: 1 / -1; border-top: 1px solid var(--color-border); padding-top: 0.5rem;">
+                                <span class="calc-result-label">Обща покривна площ с фира:</span>
+                                <span class="calc-result-val" id="calc-total-area-val" style="font-size: 1rem;">0.00 м²</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart adding action row -->
+                    <div style="display: flex; gap: 1rem; align-items: center; border-top: 1px solid var(--color-border); padding-top: 1.5rem; margin-top: auto;">
+                        <div style="display: flex; flex-direction: column; gap: 0.25rem; width: 90px;">
+                            <span style="font-size: 0.75rem; font-weight: 600; color: var(--color-text-muted);">Количество</span>
+                            <input type="number" id="modal-qty-boxes" value="1" min="1" style="padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); text-align: center; outline: none; font-weight: 700;">
+                        </div>
+                        <button class="btn btn-primary" id="modal-buy-btn" data-i18n="btn_add_cart" style="flex: 1; padding: 0.95rem;">Купи</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOPPING CART SLIDE DRAWER -->
+    <div class="cart-drawer-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3 data-i18n="cart_title">Количка</h3>
+            <button class="close-cart-btn" id="close-cart">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+
+        <div class="cart-items-list" id="cart-items">
+            <!-- Dynamically populated via JS -->
+            <div class="cart-empty-msg" data-i18n="cart_empty">Количката ви е празна</div>
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span data-i18n="cart_subtotal">Междинна сума</span>
+                <span id="cart-subtotal-val">0.00 лв.</span>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.35rem; margin: 0.25rem 0;">
+                <label for="shipping-method" style="font-size: 0.75rem; font-weight: 600; color: var(--color-text-muted);" data-i18n="cart_shipping">Доставка</label>
+                <select id="shipping-method" class="sort-select" style="padding: 0.4rem; font-size: 0.8rem;" onchange="window.app.updateCartUI()">
+                    <option value="showroom">Вземане от склад Варна (БЕЗПЛАТНО)</option>
+                    <option value="delivery">До адрес (с куриер в цяла България)</option>
+                </select>
+            </div>
+
+            <div class="summary-row" style="font-size: 0.8rem;">
+                <span>Доставка сума:</span>
+                <span id="cart-shipping-val" style="font-weight: 600;">БЕЗПЛАТНА</span>
+            </div>
+
+            <div class="summary-row summary-row-total">
+                <span data-i18n="cart_total">Общо</span>
+                <span id="cart-total-val" style="color: var(--color-accent-dark);">0.00 лв.</span>
+            </div>
+            
+            <button class="btn btn-accent" id="cart-checkout-btn" data-i18n="btn_checkout" style="width: 100%; margin-top: 0.5rem; padding: 0.95rem;">Завърши поръчката</button>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATIONS BOX -->
+    <div class="toast-container" id="toast-box"></div>
+
+    <!-- Core Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

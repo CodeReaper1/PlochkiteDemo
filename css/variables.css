@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Color Palette */
+    --color-primary: #121824;       /* Deep Slate/Charcoal */
+    --color-primary-light: #1e293b; /* Slate Gray */
+    --color-accent: #c5a880;        /* Brushed Gold */
+    --color-accent-dark: #b39268;   /* Deep Gold */
+    --color-bg-sand: #fbfbfa;       /* Warm Sand Neutral */
+    --color-bg-white: #ffffff;
+    --color-card-bg: rgba(255, 255, 255, 0.8);
+    
+    /* Secondary & Accent Colors */
+    --color-ceramic-blue: #1e3a47;  /* Deep Teal/Ceramic */
+    --color-terracotta: #d37d64;    /* Clay/Terracotta Accent */
+    --color-text-dark: #121824;
+    --color-text-muted: #64748b;
+    --color-border: #e2e8f0;
+    --color-border-warm: #eae6df;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Shadows & Elevation */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-gold: 0 10px 20px -5px rgba(197, 168, 128, 0.2);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-blur: blur(12px);
+
+    /* Borders */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* Animations & Transitions */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Mode Overrides (Optional, activated by class) */
+.dark-theme {
+    --color-primary: #f8fafc;
+    --color-primary-light: #f1f5f9;
+    --color-bg-sand: #0f172a;
+    --color-bg-white: #1e293b;
+    --color-card-bg: rgba(30, 41, 59, 0.8);
+    --color-text-dark: #f8fafc;
+    --color-text-muted: #94a3b8;
+    --color-border: #334155;
+    --color-border-warm: #475569;
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.05);
+}
