@@ -513,6 +513,120 @@ const TRANSLATIONS = {
     }
 };
 
+/* ============================================
+   MOCK CHATBOT — canned multilingual assistant
+   ============================================ */
+const CHATBOT_I18N = {
+    bg: {
+        title: "Plochkite Асистент",
+        status: "Онлайн сега",
+        placeholder: "Напишете съобщение...",
+        greeting: "Здравейте! 👋 Аз съм виртуалният асистент на Plochkite.bg. Как мога да ви помогна днес?",
+        quick: ["Работно време", "Доставка", "Мостри", "Свържете ме с човек"],
+        fallback: "Благодаря за въпроса! Един от нашите консултанти ще ви отговори с детайли. Междувременно можете да разгледате каталога или да ни се обадите на 052 / 333 308.",
+        replies: [
+            { k: ["работно време", "часове", "отворен", "затворен"], a: "🕒 Работно време на шоурума във Варна:\nПон – Пет: 09:00 – 18:00\nСъбота: 09:30 – 14:00\nНеделя: Затворено" },
+            { k: ["доставка", "куриер", "изпращ", "транспорт"], a: "🚚 Предлагаме бърза доставка с куриер в цяла България, както и безплатно вземане от нашия склад във Варна." },
+            { k: ["мостр", "проба", "образец"], a: "🎨 Да! Предлагаме безплатни мостри на плочките. Заповядайте в шоурума или оставете запитване през формата за контакт." },
+            { k: ["цена", "струва", "оферта", "лев"], a: "💶 Цените са видими за всеки продукт в каталога. За количествени поръчки можем да подготвим индивидуална оферта — оставете запитване." },
+            { k: ["адрес", "къде", "локация", "магазин"], a: "📍 Намираме се на бул. Приморски 17, гр. Варна (близо до Морска гара)." },
+            { k: ["човек", "оператор", "телефон", "обади"], a: "📞 Разбира се! Свържете се с наш консултант на 052 / 333 308 или 0899 91 81 35. С радост ще помогнем!" },
+            { k: ["здрав", "здравей", "добър ден", "привет"], a: "Здравейте! Радвам се да помогна. За плочки, санитария, смесители или доставка — просто попитайте. 😊" },
+            { k: ["благодар", "мерси"], a: "Моля, винаги! 🙏 Има ли още нещо, с което да помогна?" }
+        ]
+    },
+    en: {
+        title: "Plochkite Assistant",
+        status: "Online now",
+        placeholder: "Type a message...",
+        greeting: "Hello! 👋 I'm the Plochkite.bg virtual assistant. How can I help you today?",
+        quick: ["Opening hours", "Delivery", "Samples", "Talk to a human"],
+        fallback: "Thanks for your question! One of our consultants will follow up with details. Meanwhile, feel free to browse the catalog or call us at 052 / 333 308.",
+        replies: [
+            { k: ["hour", "open", "close", "time"], a: "🕒 Varna showroom hours:\nMon – Fri: 09:00 – 18:00\nSaturday: 09:30 – 14:00\nSunday: Closed" },
+            { k: ["deliver", "ship", "courier", "transport"], a: "🚚 We offer fast courier delivery across Bulgaria, plus free pickup from our warehouse in Varna." },
+            { k: ["sample", "swatch"], a: "🎨 Yes! We provide free tile samples. Visit the showroom or leave an inquiry via the contact form." },
+            { k: ["price", "cost", "quote"], a: "💶 Prices are shown on every product in the catalog. For bulk orders we can prepare a custom quote — just leave an inquiry." },
+            { k: ["address", "where", "location", "store"], a: "📍 We're at 17 Primorski Blvd, Varna (near the Sea Station)." },
+            { k: ["human", "agent", "phone", "call", "person"], a: "📞 Of course! Reach a consultant at 052 / 333 308 or 0899 91 81 35. Happy to help!" },
+            { k: ["hi", "hello", "hey"], a: "Hi there! Happy to help. Ask me about tiles, sanitaryware, faucets or delivery. 😊" },
+            { k: ["thank"], a: "You're very welcome! 🙏 Anything else I can help with?" }
+        ]
+    },
+    ru: {
+        title: "Ассистент Plochkite",
+        status: "Онлайн",
+        placeholder: "Введите сообщение...",
+        greeting: "Здравствуйте! 👋 Я виртуальный ассистент Plochkite.bg. Чем могу помочь?",
+        quick: ["Часы работы", "Доставка", "Образцы", "Связаться с человеком"],
+        fallback: "Спасибо за вопрос! Наш консультант свяжется с вами. А пока вы можете посмотреть каталог или позвонить: 052 / 333 308.",
+        replies: [
+            { k: ["час", "работ", "открыт", "закрыт", "время"], a: "🕒 Часы работы шоурума в Варне:\nПн – Пт: 09:00 – 18:00\nСуббота: 09:30 – 14:00\nВоскресенье: Закрыто" },
+            { k: ["достав", "курьер", "отправ", "транспорт"], a: "🚚 Мы предлагаем быструю курьерскую доставку по всей Болгарии и бесплатный самовывоз со склада в Варне." },
+            { k: ["образц", "пробн"], a: "🎨 Да! Мы предоставляем бесплатные образцы плитки. Приходите в шоурум или оставьте заявку." },
+            { k: ["цен", "стоит", "стоимост"], a: "💶 Цены указаны у каждого товара в каталоге. Для оптовых заказов подготовим индивидуальное предложение." },
+            { k: ["адрес", "где", "магазин"], a: "📍 Мы находимся по адресу бул. Приморски 17, Варна (рядом с Морским вокзалом)." },
+            { k: ["человек", "оператор", "телефон", "позвон"], a: "📞 Конечно! Свяжитесь с консультантом: 052 / 333 308 или 0899 91 81 35." },
+            { k: ["привет", "здрав", "добр"], a: "Здравствуйте! Рад помочь. Спрашивайте о плитке, сантехнике, смесителях или доставке. 😊" },
+            { k: ["спасиб", "благодар"], a: "Пожалуйста! 🙏 Чем ещё могу помочь?" }
+        ]
+    },
+    ua: {
+        title: "Асистент Plochkite",
+        status: "Онлайн",
+        placeholder: "Введіть повідомлення...",
+        greeting: "Вітаю! 👋 Я віртуальний асистент Plochkite.bg. Чим можу допомогти?",
+        quick: ["Години роботи", "Доставка", "Зразки", "Зв'язатися з людиною"],
+        fallback: "Дякую за запитання! Наш консультант зв'яжеться з вами. А поки можете переглянути каталог або зателефонувати: 052 / 333 308.",
+        replies: [
+            { k: ["годин", "робот", "відкрит", "закрит", "час"], a: "🕒 Години роботи шоуруму у Варні:\nПн – Пт: 09:00 – 18:00\nСубота: 09:30 – 14:00\nНеділя: Зачинено" },
+            { k: ["достав", "кур'єр", "відправ", "транспорт"], a: "🚚 Пропонуємо швидку кур'єрську доставку по всій Болгарії та безкоштовний самовивіз зі складу у Варні." },
+            { k: ["зразк", "пробн"], a: "🎨 Так! Ми надаємо безкоштовні зразки плитки. Завітайте до шоуруму або залиште запит." },
+            { k: ["цін", "коштує", "вартіст"], a: "💶 Ціни вказані для кожного товару в каталозі. Для оптових замовлень підготуємо індивідуальну пропозицію." },
+            { k: ["адрес", "де", "магазин"], a: "📍 Ми знаходимося на бул. Приморські 17, Варна (біля Морського вокзалу)." },
+            { k: ["людин", "оператор", "телефон", "зателефон"], a: "📞 Звісно! Зв'яжіться з консультантом: 052 / 333 308 або 0899 91 81 35." },
+            { k: ["привіт", "вітаю", "добр"], a: "Вітаю! Радий допомогти. Запитуйте про плитку, сантехніку, змішувачі чи доставку. 😊" },
+            { k: ["дякую", "дяку"], a: "Будь ласка! 🙏 Чим ще можу допомогти?" }
+        ]
+    },
+    es: {
+        title: "Asistente Plochkite",
+        status: "En línea",
+        placeholder: "Escribe un mensaje...",
+        greeting: "¡Hola! 👋 Soy el asistente virtual de Plochkite.bg. ¿En qué puedo ayudarte?",
+        quick: ["Horario", "Envío", "Muestras", "Hablar con un humano"],
+        fallback: "¡Gracias por tu pregunta! Un asesor te contactará con los detalles. Mientras tanto, revisa el catálogo o llámanos al 052 / 333 308.",
+        replies: [
+            { k: ["horario", "hora", "abierto", "cerrado"], a: "🕒 Horario del showroom en Varna:\nLun – Vie: 09:00 – 18:00\nSábado: 09:30 – 14:00\nDomingo: Cerrado" },
+            { k: ["envío", "envio", "entrega", "mensajer", "transporte"], a: "🚚 Ofrecemos envío rápido por mensajería a toda Bulgaria y recogida gratuita en nuestro almacén de Varna." },
+            { k: ["muestra"], a: "🎨 ¡Sí! Ofrecemos muestras gratuitas de azulejos. Visita el showroom o deja una consulta." },
+            { k: ["precio", "cuesta", "presupuesto"], a: "💶 Los precios se muestran en cada producto del catálogo. Para pedidos al por mayor preparamos un presupuesto personalizado." },
+            { k: ["dirección", "direccion", "dónde", "donde", "tienda"], a: "📍 Estamos en Bulevar Primorski 17, Varna (cerca de la Estación Marítima)." },
+            { k: ["humano", "agente", "teléfono", "telefono", "llamar", "persona"], a: "📞 ¡Por supuesto! Contacta a un asesor en 052 / 333 308 o 0899 91 81 35." },
+            { k: ["hola", "buenas"], a: "¡Hola! Encantado de ayudar. Pregúntame por azulejos, sanitarios, grifos o envíos. 😊" },
+            { k: ["gracias"], a: "¡De nada! 🙏 ¿Algo más en lo que pueda ayudar?" }
+        ]
+    },
+    it: {
+        title: "Assistente Plochkite",
+        status: "Online ora",
+        placeholder: "Scrivi un messaggio...",
+        greeting: "Ciao! 👋 Sono l'assistente virtuale di Plochkite.bg. Come posso aiutarti oggi?",
+        quick: ["Orari", "Spedizione", "Campioni", "Parla con un umano"],
+        fallback: "Grazie per la domanda! Un nostro consulente ti risponderà con i dettagli. Nel frattempo, esplora il catalogo o chiamaci al 052 / 333 308.",
+        replies: [
+            { k: ["orari", "ora", "aperto", "chiuso"], a: "🕒 Orari dello showroom di Varna:\nLun – Ven: 09:00 – 18:00\nSabato: 09:30 – 14:00\nDomenica: Chiuso" },
+            { k: ["spedizion", "consegna", "corriere", "trasporto"], a: "🚚 Offriamo spedizione rapida con corriere in tutta la Bulgaria e ritiro gratuito dal nostro magazzino di Varna." },
+            { k: ["campion"], a: "🎨 Sì! Forniamo campioni gratuiti di piastrelle. Vieni in showroom o lascia una richiesta." },
+            { k: ["prezzo", "costa", "preventivo"], a: "💶 I prezzi sono indicati per ogni prodotto nel catalogo. Per ordini all'ingrosso prepariamo un preventivo personalizzato." },
+            { k: ["indirizzo", "dove", "negozio"], a: "📍 Siamo in Viale Primorski 17, Varna (vicino alla Stazione Marittima)." },
+            { k: ["umano", "operatore", "telefono", "chiamare", "persona"], a: "📞 Certo! Contatta un consulente al 052 / 333 308 o 0899 91 81 35." },
+            { k: ["ciao", "salve", "buongiorno"], a: "Ciao! Felice di aiutare. Chiedimi di piastrelle, sanitari, rubinetti o spedizioni. 😊" },
+            { k: ["grazie"], a: "Prego! 🙏 C'è altro con cui posso aiutarti?" }
+        ]
+    }
+};
+
 class AppController {
     constructor() {
         this.currentLang = 'bg';
@@ -533,6 +647,10 @@ class AppController {
 
         this.activeDetailTile = null;
         this.currentWasteFactor = 10; // Default 10%
+
+        // Mock chatbot state
+        this.chatbotOpen = false;
+        this.chatbotGreeted = false;
     }
 
     init() {
@@ -545,6 +663,7 @@ class AppController {
         this.renderAdminProductList();
         this.translatePage();
         this.updateCartUI();
+        this.initChatbot();
     }
 
     bindEvents() {
@@ -555,6 +674,12 @@ class AppController {
                 this.switchTab(tabId);
             });
         });
+
+        // Mobile hamburger navigation
+        const navToggle = document.getElementById('nav-toggle');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => this.toggleMobileNav());
+        }
 
         // Language toggle buttons
         document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -723,8 +848,21 @@ class AppController {
             activeSection.classList.add('active');
         }
 
+        // Close mobile nav if open
+        this.toggleMobileNav(false);
+
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    toggleMobileNav(force) {
+        const nav = document.getElementById('main-nav');
+        const toggle = document.getElementById('nav-toggle');
+        if (!nav || !toggle) return;
+        const open = typeof force === 'boolean' ? force : !nav.classList.contains('open');
+        nav.classList.toggle('open', open);
+        toggle.classList.toggle('active', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     }
 
     setLanguage(lang) {
@@ -739,6 +877,7 @@ class AppController {
         this.renderCatalog();
         this.renderAdminProductList();
         this.updateCartUI();
+        this.updateChatbotLang();
         if (this.activeDetailTile) {
             this.repopulateModalContent();
         }
@@ -1360,6 +1499,133 @@ class AppController {
             toast.classList.remove('active');
             setTimeout(() => toast.remove(), 400);
         }, 3000);
+    }
+
+    /* ============================================
+       MOCK CHATBOT METHODS
+       ============================================ */
+    initChatbot() {
+        const toggle = document.getElementById('chatbot-toggle');
+        const minBtn = document.getElementById('chatbot-min');
+        const form = document.getElementById('chatbot-form');
+
+        if (toggle) toggle.addEventListener('click', () => this.toggleChatbot());
+        if (minBtn) minBtn.addEventListener('click', () => this.toggleChatbot(false));
+
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const input = document.getElementById('chatbot-text');
+                const text = input.value.trim();
+                if (!text) return;
+                input.value = '';
+                this.chatbotSend(text);
+            });
+        }
+
+        this.updateChatbotLang();
+    }
+
+    chatbotData() {
+        return CHATBOT_I18N[this.currentLang] || CHATBOT_I18N.en;
+    }
+
+    updateChatbotLang() {
+        const data = this.chatbotData();
+        const titleEl = document.getElementById('chatbot-title');
+        const statusEl = document.getElementById('chatbot-status');
+        const inputEl = document.getElementById('chatbot-text');
+        if (titleEl) titleEl.textContent = data.title;
+        if (statusEl) statusEl.textContent = data.status;
+        if (inputEl) inputEl.placeholder = data.placeholder;
+        this.renderChatbotQuickReplies();
+    }
+
+    renderChatbotQuickReplies() {
+        const wrap = document.getElementById('chatbot-quick');
+        if (!wrap) return;
+        const data = this.chatbotData();
+        wrap.innerHTML = '';
+        data.quick.forEach(label => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'chat-quick-btn';
+            btn.textContent = label;
+            btn.addEventListener('click', () => this.chatbotSend(label));
+            wrap.appendChild(btn);
+        });
+    }
+
+    toggleChatbot(force) {
+        const widget = document.getElementById('chatbot');
+        if (!widget) return;
+        this.chatbotOpen = typeof force === 'boolean' ? force : !this.chatbotOpen;
+        widget.classList.toggle('open', this.chatbotOpen);
+
+        const badge = document.getElementById('chatbot-badge');
+        if (badge) badge.classList.add('hidden');
+
+        if (this.chatbotOpen && !this.chatbotGreeted) {
+            this.chatbotGreeted = true;
+            this.chatbotTypeReply(this.chatbotData().greeting, 500);
+        }
+        if (this.chatbotOpen) {
+            setTimeout(() => {
+                const input = document.getElementById('chatbot-text');
+                if (input) input.focus();
+            }, 300);
+        }
+    }
+
+    chatbotAppend(text, sender) {
+        const body = document.getElementById('chatbot-body');
+        if (!body) return null;
+        const msg = document.createElement('div');
+        msg.className = `chat-msg chat-msg-${sender}`;
+        // Preserve line breaks, escape HTML
+        msg.textContent = text;
+        msg.style.whiteSpace = 'pre-line';
+        body.appendChild(msg);
+        body.scrollTop = body.scrollHeight;
+        return msg;
+    }
+
+    chatbotShowTyping() {
+        const body = document.getElementById('chatbot-body');
+        if (!body) return null;
+        const el = document.createElement('div');
+        el.className = 'chat-typing';
+        el.innerHTML = '<span></span><span></span><span></span>';
+        body.appendChild(el);
+        body.scrollTop = body.scrollHeight;
+        return el;
+    }
+
+    chatbotTypeReply(text, delay = 700) {
+        const typing = this.chatbotShowTyping();
+        setTimeout(() => {
+            if (typing) typing.remove();
+            this.chatbotAppend(text, 'bot');
+        }, delay);
+    }
+
+    chatbotSend(text) {
+        this.chatbotAppend(text, 'user');
+        const answer = this.chatbotMatchReply(text);
+        // Simulate thinking time proportional to answer length
+        const delay = 600 + Math.min(1200, answer.length * 12);
+        this.chatbotTypeReply(answer, delay);
+    }
+
+    chatbotMatchReply(text) {
+        const data = this.chatbotData();
+        const normalized = text.toLowerCase();
+        for (const rule of data.replies) {
+            if (rule.k.some(kw => normalized.includes(kw))) {
+                return rule.a;
+            }
+        }
+        return data.fallback;
     }
 }
 
